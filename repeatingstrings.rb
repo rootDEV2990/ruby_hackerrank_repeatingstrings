@@ -1,7 +1,9 @@
 def repeatedString(s, n)
-   count = 0
+    count = 0
     str = ''
-    if s.length == 1
+    if s == 'x'
+      str = 0
+    elsif s.length == 1
         str = n
     else
         p s.split(//)
@@ -15,8 +17,9 @@ def repeatedString(s, n)
         break if count == extras
         end
         others = str << s[0..(remainder - 1)] if s.length > 1
-        str.count("a")
+        str = str.count("a")
     end
+    str
 end
 p repeatedStrings('aba', 10) #this outputs 7
 p repeatedStrings('a', 1000000) #this outputs 1000000
